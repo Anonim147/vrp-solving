@@ -1,0 +1,46 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="data\data1.json" />
+    <None Remove="data\data2.json" />
+    <None Remove="data\data3.json" />
+    <None Remove="data\E-n22-k4-request.txt" />
+    <None Remove="data\E-n33-k4-request.txt" />
+    <None Remove="data\E-n51-k5-request.txt" />
+    <None Remove="data\E-n76-k10-request.txt" />
+    <None Remove="data\Sl-n1-d10.txt" />
+    <None Remove="data\Sl-n1-d25.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="data\data3.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\data2.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="data\data1.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\VRP.Core.Common\VRP.Core.Common.csproj" />
+    <ProjectReference Include="..\VRP.Core.CWSaving\VRP.Core.CWSaving.csproj" />
+    <ProjectReference Include="..\VRP.Core.SimulateAnnealing\VRP.Core.SimulateAnnealing.csproj" />
+  </ItemGroup>
+
+  <ProjectExtensions><VisualStudio><UserProperties /></VisualStudio></ProjectExtensions>
+
+</Project>
